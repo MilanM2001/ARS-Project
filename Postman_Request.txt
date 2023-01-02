@@ -1,0 +1,65 @@
+GET All Configs
+localhost:8000/configs
+
+-----------------------------
+
+GET Single Config
+localhost:8000/config/{id}
+
+-----------------------------
+
+POST Config
+localhost:8000/config
+
+Single
+{
+    "version": "v2",
+    "entries": {
+        "name": "name2",
+        "last": "last2"
+    }
+}
+
+Group
+FIRST EXAMPLE
+{
+    "version": "v1",
+    "configs": [
+        {
+            "name": "name1",
+            "last": "last1"
+        },
+        {
+            "name": "name1",
+            "last": "last1"
+        },
+        {
+            "name": "name2",
+            "last": "last2"
+        }
+    ]
+}
+
+SECOND EXAMPLE
+{
+    "version": "v2",
+    "configs": [
+        {
+            "name": "name3",
+            "last": "last3"
+        },
+        {
+            "name": "name4",
+            "last": "last4"
+        }
+    ]
+}
+
+-----------------------------
+
+DELETE Config
+localhost:8000/Config/{id}
+
+-----------------------------
+PUT Config
+localhost:8000/config/{id}
